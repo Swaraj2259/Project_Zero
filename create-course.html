@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Course - Project Zero Boundaries</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <!-- Similar navigation as index.html -->
+            <!-- ...existing code... -->
+        </nav>
+    </header>
+
+    <main id="main-content" class="page-transition">
+        <div class="course-container">
+            <h1>Create Your Course</h1>
+            <p class="subtitle">Use AI to generate and customize your course content</p>
+            
+            <form id="course-form" class="glass-container">
+                <div class="form-group">
+                    <label>Course Title</label>
+                    <input type="text" required placeholder="Enter course title">
+                    
+                    <label>Course Description</label>
+                    <textarea required placeholder="Describe your course"></textarea>
+                    
+                    <label>Difficulty Level</label>
+                    <select required>
+                        <option value="">Select level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    
+                    <label>Topics (comma-separated)</label>
+                    <input type="text" placeholder="Enter main topics">
+                    
+                    <label>Sub Topics (comma-separated)</label>
+                    <input type="text" placeholder="Enter sub topics">
+                    
+                    <div class="ai-suggestions">
+                        <h3>AI Suggestions</h3>
+                        <div class="suggestion-chips">
+                            <button type="button" class="chip">Suggested Topic 1</button>
+                            <button type="button" class="chip">Suggested Topic 2</button>
+                            <button type="button" class="chip">Suggested Topic 3</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn primary">Generate Course</button>
+                    <button type="button" class="btn secondary">Save Draft</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Check auth before loading page
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script src="js/course.js" defer></script>
+</body>
+</html>

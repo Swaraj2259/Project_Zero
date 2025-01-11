@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile - Project Zero Boundaries</title>
+    <meta name="description" content="Create your learning profile">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Same navigation as index.html -->
+        <nav class="main-nav" aria-label="Main navigation">
+            // ...existing code...
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="profile-container">
+            <div class="progress-bar">
+                <div class="progress" data-step="1"></div>
+            </div>
+            
+            <form id="profile-form" class="multi-step-form">
+                <div class="step" data-step="1">
+                    <h2>Personal Details</h2>
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Full Name">
+                        <input type="email" id="email" required placeholder="Email">
+                        <input type="text" id="location" placeholder="Location">
+                    </div>
+                    <button type="button" class="btn primary next-step">Continue</button>
+                </div>
+
+                <div class="step" data-step="2">
+                    <h2>Learning Preferences</h2>
+                    <div class="form-group">
+                        <select id="learning-pace" required>
+                            <option value="">Select Learning Pace</option>
+                            <option value="fast">Fast</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="relaxed">Relaxed</option>
+                        </select>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" value="video"> Video Content</label>
+                            <label><input type="checkbox" value="text"> Text Content</label>
+                            <label><input type="checkbox" value="interactive"> Interactive Exercises</label>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn secondary prev-step">Back</button>
+                        <button type="button" class="btn primary next-step">Continue</button>
+                    </div>
+                </div>
+
+                <div class="step" data-step="3">
+                    <h2>Learning Goals</h2>
+                    <div class="form-group">
+                        <textarea id="short-term" placeholder="Short-term goals"></textarea>
+                        <textarea id="long-term" placeholder="Long-term goals"></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn secondary prev-step">Back</button>
+                        <button type="submit" class="btn primary">Create Profile</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/profile.js" defer></script>
+</body>
+</html>
